@@ -33,4 +33,3 @@ Profile Gen is a visual, drag-and-drop tool that helps developers create stunnin
 **Before:** A blank canvas. Placeholder text. Forgettable.
 
 **After:** A dynamic showcase. Live metrics that breathe. A visual identity that captures who you are as a developer — your streaks, your languages, your passion.
-
