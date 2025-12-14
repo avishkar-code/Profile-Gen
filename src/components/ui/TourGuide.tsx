@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowRight, FaTimes, FaCheck } from 'react-icons/fa';
+import { FaArrowRight, FaCheck } from 'react-icons/fa';
 
 interface TourStep {
     targetId: string;
