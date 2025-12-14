@@ -10,6 +10,16 @@ Ever looked at someone's GitHub profile and wondered, *"How do they make it look
 
 Profile Gen is a visual, drag-and-drop tool that helps developers create stunning GitHub profile READMEs in minutes — no Markdown wizardry required. Whether you're a student building your first portfolio, a developer leveling up your online presence, or just someone who wants their GitHub to *actually* look like they care, this is for you.
 
+
+## 🖼️ Preview
+
+### Landing Page
+![Landing Page](src/assets/first.png)
+
+### Dashboard
+![Dashboard](src/assets/dashboard.png)
+
+---
 ## Why use it?
 
 - 🎨 **Visual Editor** — See your changes in real-time. No more guessing what your Markdown will render to.
