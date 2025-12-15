@@ -1,5 +1,5 @@
 import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from 'framer-motion';
-import { FaGithub, FaMagic, FaCode, FaPalette } from 'react-icons/fa';
+import { FaGithub, FaMagic, FaCode, FaPalette, FaStar } from 'react-icons/fa';
 import { useState, useEffect, type MouseEvent } from 'react';
 import { Magnetic } from '../ui/Magnetic';
 import { PixelCanvas } from '../ui/PixelCard';
@@ -14,6 +14,7 @@ const WORDS = ["Identity", "GitHub Profile", "Dev Brand", "Portfolio"];
 
 export function LandingPage({ onEnter }: LandingPageProps) {
     const [index, setIndex] = useState(0);
+    const [starCount, setStarCount] = useState<number | null>(null);
 
     // Mouse Spotlight Logic
     let mouseX = useMotionValue(0);
@@ -32,11 +33,42 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         return () => clearInterval(interval);
     }, []);
 
+    // Fetch GitHub stars
+    useEffect(() => {
+        fetch('https://api.github.com/repos/Shiva-129/Profile-Gen')
+            .then(res => res.json())
+            .then(data => {
+                if (data.stargazers_count !== undefined) {
+                    setStarCount(data.stargazers_count);
+                }
+            })
+            .catch(() => { });
+    }, []);
+
     return (
         <div
             className="relative w-full min-h-screen bg-slate-950 overflow-x-hidden selection:bg-primary-500/30 font-sans group"
             onMouseMove={handleMouseMove}
         >
+            {/* GitHub Star Badge - Top Right */}
+            <motion.a
+                href="https://github.com/Shiva-129/Profile-Gen"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                className="fixed top-6 right-6 z-50 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-700/50 text-slate-300 text-sm font-medium backdrop-blur-xl shadow-lg hover:border-yellow-500/50 hover:bg-slate-800/90 transition-all group cursor-pointer"
+            >
+                <FaStar className="text-yellow-400 group-hover:scale-110 transition-transform" />
+                <span className="hidden sm:inline">Star</span>
+                {starCount !== null && (
+                    <span className="px-2 py-0.5 bg-slate-800 rounded-full text-xs text-yellow-400 font-bold">
+                        {starCount}
+                    </span>
+                )}
+            </motion.a>
+
             {/* --- Fixed Background System --- */}
 
             {/* 1. Base Dark Layer */}
@@ -95,10 +127,6 @@ export function LandingPage({ onEnter }: LandingPageProps) {
             {/* === SECTION 1: HERO === */}
             <section className="relative z-10 w-full h-screen flex flex-col items-center justify-center">
                 <div className="text-center space-y-8 max-w-5xl px-4 flex flex-col items-center">
-
-                    {/* Hero Badge */}
-
-
                     {/* Main Headline */}
                     <div className="relative z-20">
                         <motion.h1
@@ -241,9 +269,6 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                             className="w-full h-full"
                         >
                             <div className="flex flex-col space-y-6 p-8 h-full">
-                                <div className="inline-block self-start px-3 py-1 bg-slate-800 rounded-full text-xs text-slate-400 font-mono z-10">
-                                    // Before
-                                </div>
                                 <div className="space-y-4 flex-grow z-10">
                                     <h2 className="text-3xl font-bold text-slate-300">
                                         "Before, it is just a plan..."
@@ -285,10 +310,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity pointer-events-none" />
 
                             <div className="flex flex-col space-y-6 p-8 h-full relative z-10">
-                                <div className="inline-block self-start px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-mono border border-indigo-500/30">
-                                    // After
-                                </div>
-                                <div className="space-y-4 flex-grow mt-4">
+                                <div className="space-y-4 flex-grow">
                                     <h2 className="text-4xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-indigo-100">
                                         "...After, I describe YOU."
                                     </h2>
